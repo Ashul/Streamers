@@ -1,0 +1,56 @@
+{
+  "stream": [
+    {
+      "title": "s",
+      "description": "s",
+      "id": 1
+    },
+    {
+      "title": "s",
+      "description": "s",
+      "id": 2
+    },
+    {
+      "title": "Title",
+      "description": "Description",
+      "id": 3
+    },
+    {
+      "title": "Title2",
+      "description": "Description",
+      "id": 4
+    },
+    {
+      "title": "Date",
+      "description": "Not Known",
+      "id": 5
+    },
+    {
+      "title": "fre",
+      "description": "wer",
+      "id": 6
+    },
+    {
+      "title": "title",
+      "description": "desc",
+      "id": 7
+    },
+    {
+      "title": "This is a new stream",
+      "description": "No description provided",
+      "id": 8
+    },
+    {
+      "title": "Stream with userId",
+      "description": "No description available",
+      "userId": "115442942133899986828",
+      "id": 9
+    },
+    {
+      "title": "New Title",
+      "description": "No Desc",
+      "userId": "115442942133899986828",
+      "id": 10
+    }
+  ]
+}
