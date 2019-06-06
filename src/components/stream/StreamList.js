@@ -12,8 +12,8 @@ class StreamList extends Component{
         if(stream.userId === this.props.currentUserId){
             return (
                 <div>
-                    <button type="button" className="btn btn-danger btn-sm">Delete</button>
-                    <button type="button" className="btn btn-primary btn-sm">Edit</button>
+                    <Link to={`/streams/edit/${stream.id}`} className="btn btn-primary btn-sm mg">Edit</Link>
+                    <button className="btn btn-danger btn-sm mg">Delete</button>
 
                 </div>
             )
@@ -36,7 +36,11 @@ class StreamList extends Component{
             this.props.streams.map((stream)=>{                
                 return (  
                     <div className="card" key={stream.id}>
-                    <div className="card-header">{stream.title}</div>
+                    <div className="card-header">
+                    <Link to={`/streams/${stream.id}`}>
+                    {stream.title}
+                    </Link>
+                    </div>
                     <div className="card-body">{stream.description}</div> 
                     <div className="card-footer">{this.renderButton(stream)}</div>
                     </div>
@@ -45,9 +49,7 @@ class StreamList extends Component{
              
          })
          
-        )
-        
-       
+        )  
        
     }
 
