@@ -2,18 +2,28 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {fetchStreams} from '../../actions'
 import {Link} from 'react-router-dom';
+import MyModal from '../Modal';
+import { ModalManager} from 'react-dynamic-modal';
+import {deleteStream} from '../../actions';
+
+
 class StreamList extends Component{
 
     componentDidMount(){
+        console.log(this.props)
        this.props.fetchStreams()
     }
+
+    openModal(stream){
+        ModalManager.open(<MyModal text={stream} deleteStream={this.props.deleteStream} onRequestClose={() => true}/>);
+     }
 
     renderButton = (stream)=>{
         if(stream.userId === this.props.currentUserId){
             return (
                 <div>
                     <Link to={`/streams/edit/${stream.id}`} className="btn btn-primary btn-sm mg">Edit</Link>
-                    <button className="btn btn-danger btn-sm mg">Delete</button>
+                    <button className="btn btn-danger btn-sm mg" onClick={()=>this.openModal(stream)}>Delete</button>
 
                 </div>
             )
@@ -57,7 +67,7 @@ class StreamList extends Component{
         return(
             <div>
                 <div>{this.renderList()}</div>
-                <div>{this.renderCreateButton()}</div>
+                <div style={{float:'left', width:'100%'}}>{this.renderCreateButton()}</div>
                 
             </div>
         )
@@ -71,4 +81,4 @@ const mapStateToProps = (state) =>{
     }
 }
 
-export default connect(mapStateToProps, {fetchStreams})(StreamList)
+export default connect(mapStateToProps, {fetchStreams, deleteStream})(StreamList)

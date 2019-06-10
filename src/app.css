@@ -1,5 +1,11 @@
 
-.card{font-size:14px;margin-bottom: 15px;}
+.card{font-size:14px; width:23%; margin: 1%; float: left;}
 .card-body{font-size:14px;}
 .card-title{font-size:14px;}
 .mg{margin-right: 10px;}
+.my-modal{
+    padding: 10px;
+}
+.my-modal h6{
+    line-height: 60px;
+}

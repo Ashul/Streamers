@@ -1,26 +1,16 @@
 {
   "stream": [
     {
-      "title": "This is a new stream",
-      "description": "No description provided",
-      "id": 8
-    },
-    {
-      "title": "Stream with userId edited2",
-      "description": "No description available",
-      "userId": "115442942133899986828",
-      "id": 9
-    },
-    {
-      "title": "New Title2",
-      "description": "No Desc",
-      "id": 10
-    },
-    {
-      "title": "New Streaming with patch",
-      "description": "Component resue",
+      "title": "All things are working",
+      "description": "No need of description",
       "userId": "115442942133899986828",
       "id": 11
+    },
+    {
+      "title": "Streaming new video",
+      "description": "not available",
+      "userId": "115442942133899986828",
+      "id": 12
     }
   ]
 }

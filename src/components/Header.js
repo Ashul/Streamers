@@ -22,7 +22,7 @@ const Header = () =>{
             <Link to="/" className="nav-link" href="#">Streamy</Link>
             </li>
             <li className="nav-item">
-            <Link to="/" className="nav-link" href="#">All Streams</Link>
+            <Link to="/streams/new" className="nav-link" href="#">Create Stream</Link>
             </li>
             <li className="nav-item">
             <Link to="/" className="nav-link" href="#">
